@@ -2,27 +2,37 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinColumn,
+  ManyToOne,
   PrimaryColumn,
   UpdateDateColumn,
 } from 'typeorm';
 import { v4 as uuidv4 } from 'uuid';
+import { User } from './User';
 
-@Entity('settings')
-class Setting {
+@Entity('connections')
+class Connection {
   @PrimaryColumn()
   id: string;
 
   @Column()
-  username: string;
+  admin_id: string;
 
   @Column()
-  chat: boolean;
+  socket_id: string;
 
-  @UpdateDateColumn()
-  updated_at: Date;
+  @JoinColumn({ name: 'user_id' })
+  @ManyToOne(() => User)
+  user: User;
+
+  @Column()
+  user_id: string;
 
   @CreateDateColumn()
   created_at: Date;
+
+  @UpdateDateColumn()
+  updated_at: Date;
 
   constructor() {
     if (!this.id) {
@@ -31,4 +41,4 @@ class Setting {
   }
 }
 
-export { Setting };
+export { Connection };
