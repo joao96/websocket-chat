@@ -37,7 +37,7 @@ body {
 
 .chat {
   display: none;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .in_support_header {
@@ -201,7 +201,7 @@ body {
   width: 290px;
 }
 
-input[type="text"]:focus {
+input[type='text']:focus {
   outline: 1px solid #a8a8a8;
 }
 
@@ -303,7 +303,7 @@ input[type="text"]:focus {
 
   border-radius: 10px;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 #atendimentos {
@@ -320,7 +320,7 @@ input[type="text"]:focus {
   flex-direction: column;
 
   border-radius: 10px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .admin_date {
